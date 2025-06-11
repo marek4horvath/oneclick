@@ -1,0 +1,75 @@
+.company {
+    background: #fff;
+    padding: 3rem;
+
+    h2 {
+        color: #24a69a;
+        font-weight: 700;
+    }
+
+    p {
+        color: #696969;
+        font-size: 1rem;
+    }
+
+
+    .check-box .v-input__control .v-selection-control .v-label {
+        font-size: 0.9rem !important;
+        line-height: 1rem !important;
+    }
+
+    .submit-btn {
+        background: #24a69a;
+        width: 100%;
+        color: #fff;
+        font-weight: 400;
+    }
+
+    .add-site {
+        border: 1px solid #24a69a;
+        width: 100%;
+        color: #24a69a;
+        font-weight: 400;
+    }
+
+    .remove-site {
+        background: red;
+        width: 100%;
+        color: #fff;
+        font-weight: 400;
+    }
+}
+
+.detail-company {
+    header {
+        
+        h2 {
+            color: #24a69a;
+            font-size: 1.875rem;
+            font-weight: 700;
+        }
+
+        .address {
+            color: #696969;
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .description {
+            color: #696969;
+            font-size: 1rem;
+            line-height: 1.6rem;
+        }
+
+    }
+
+    .map {
+        margin: 2rem auto 2rem;
+        width: 95%;
+
+        .map-init {
+            height: 300px !important;
+        }
+    }
+}

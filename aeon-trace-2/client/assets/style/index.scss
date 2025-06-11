@@ -1,0 +1,109 @@
+@use "navigation";
+@use "tableData";
+@use "product";
+@use "company";
+@use "accordionTable";
+@use "dataSharingPolicy";
+@use 'sweetalert2/src/sweetalert2.scss';
+@use "sort.scss";
+@use "analysed-process.scss";
+@use "dashboard.scss";
+@use "verifySupplyChain.scss";
+
+body {
+    background-color: #F4F7FE;
+}
+
+h1 {
+    color: #26A69A !important;
+}
+
+.v-text-field {
+    .v-input__details {
+        padding: 0.5rem;
+    }
+}
+
+
+
+.v-input {
+    .v-input__control {
+        .v-field--variant-outlined {
+            .v-field__outline {
+                --v-field-border-width: 1px !important;
+            }
+        }
+
+        .v-field--variant-outlined .v-field__outline .v-field {
+            &.v-field--variant-filled {
+                .v-field__overlay {
+                    background-color: #fff
+                }
+            }
+        }
+    }
+}
+
+.v-text-field input.v-field__input[type="text"] {
+    padding: 1rem !important;
+}
+
+.v-field--variant-outlined .v-field__outline {
+    border-radius: unset !important;
+}
+
+.v-field--variant-filled {
+    .v-field__overlay {
+        background-color: #fff !important;
+    }
+
+    .v-field__outline {
+        &::after,
+        &::before {
+            border-color: unset !important;
+            border-style: unset !important;
+            border-width: unset !important;
+            border: 1px solid #949494 !important;
+        }
+    }
+}
+
+.combobox-options-list {
+    .v-field {
+        padding: 0.5rem;
+    }
+}
+
+.v-btn {
+    border-radius: unset !important;
+}
+
+.back {
+    color: #949494;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 30px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+
+    svg,
+    span {
+        cursor: pointer;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.v-color-picker-swatches__color {
+    height: 33px !important;
+    max-height: 33px !important;
+    width: 33px !important;
+    border-radius: 50% !important;
+}
+
+.v-img__img--preload  {
+    filter: none !important;
+}

@@ -1,0 +1,39 @@
+@use "./variables/color.scss" as *;
+@use "./variables/font.scss" as *;
+
+.sort-component {
+    width: 380px;
+    height: auto;
+    margin-inline-start: 25px;
+    margin-top: 25px;
+    padding: 15px !important;
+    border-radius: 40px !important;
+
+    .sort-by {
+        padding: 10px;
+        color: #707EAE;
+    }
+
+    .sort-button:hover {
+        color: #FFFFFF !important;
+        background-color: #26A69A !important;
+    }
+
+    .sort-button:focus {
+        color: #FFFFFF !important;
+        background-color: #26A69A !important;
+    }
+
+    .sort-button:active {
+        color: #FFFFFF !important;
+        background-color: #26A69A !important;
+    }
+
+    .sort-button {
+        margin-inline-start: 10px;
+        background: transparent !important;
+        color: #707EAE !important;
+        border-radius: 30px;
+    }
+}
+

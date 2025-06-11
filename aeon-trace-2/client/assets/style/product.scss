@@ -1,0 +1,59 @@
+.detail-product {
+    header {
+        h2 {
+            color: #26A69A;
+            font-size: 1.875rem;
+            font-weight: 700;
+        }
+
+        .description {
+            color: #696969;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 25.6px;
+            width: 50rem;
+        }
+
+        .footer {
+            color: #26A69A;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+    }
+
+    .accordion {
+        background: #fff;
+        margin-top: 2rem;
+
+        table {
+            border-radius: 0 !important;
+            overflow: visible;
+
+            thead {
+                tr {
+                    background: #26A69A !important;
+                }
+            }
+        }
+
+        .accordion-input {
+            padding: 0;
+
+            thead {
+                tr {
+                    background: #F3F3F3 !important;
+                    color: #696969 !important;
+                }
+            }
+        }
+    }
+}
+
+.product {
+    .action {
+        .btm-action {
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+    }
+}
