@@ -1,0 +1,14 @@
+{
+    // https://nuxt.com/docs/guide/concepts/typescript
+    "extends": "./.nuxt/tsconfig.json",
+    "compilerOptions": {
+        "allowImportingTsExtensions": true,
+        "types": [
+            "node",
+            "@nuxt/types",
+            "@vue/runtime-core",
+            "vue",
+            "@nuxtjs/axios",
+        ]
+    }
+}
