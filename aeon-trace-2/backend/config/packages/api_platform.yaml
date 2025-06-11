@@ -1,0 +1,29 @@
+api_platform:
+    title: PDP API Platform
+    version: 1.0.0
+    mapping:
+        paths: ['%kernel.project_dir%/src/Entity', '%kernel.project_dir%/src/DataTransferObjects']
+    patch_formats:
+        json: ['application/merge-patch+json']
+    docs_formats:
+        jsonld: [ 'application/ld+json' ]
+        jsonopenapi: [ 'application/vnd.openapi+json' ]
+        html: [ 'text/html' ]
+    defaults:
+        stateless: true
+        pagination_client_items_per_page: true
+        cache_headers:
+            vary: [ 'Content-Type', 'Authorization', 'Origin' ]
+        extra_properties:
+            standard_put: true
+            rfc_7807_compliant_errors: true
+    swagger:
+        versions: [3]
+        api_keys:
+            JWT:
+                name: Authorization
+                type: header
+    collection:
+        pagination:
+            enabled: true
+            items_per_page_parameter_name: 'itemsPerPage'

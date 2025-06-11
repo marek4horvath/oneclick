@@ -1,0 +1,41 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+api_login_check:
+    path: /api/auth/login
+
+invite:
+    path: /first-login
+    options:
+        expose: true
+        methods: [ 'GET' ]
+
+company_registration:
+    path: /registration-company
+    options:
+        expose: true
+        methods: [ 'GET' ]
+
+password_reset:
+    path: /password-reset
+    options:
+        expose: true
+        methods: [ 'GET' ]
+
+download_product_step_tsa:
+    path: '/api/product-step-tsa-download/{id}'
+    methods: [ GET ]
+    controller: App\Controller\Downloads\DownloadProductStepTsaController::downloadProductStepTsaFile
+
+download_dpp_tsa:
+    path: '/api/dpp-tsa-download/{id}'
+    methods: [ GET ]
+    controller: App\Controller\Downloads\DownloadDppTsaController::downloadDppTsaFile
+
+download_logistics_tsa:
+    path: '/api/logistics-tsa-download/{id}'
+    methods: [ GET ]
+    controller: App\Controller\Downloads\DownloadLogisticsTsaController::downloadLogisticsTsaFile

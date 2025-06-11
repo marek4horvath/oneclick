@@ -1,0 +1,7 @@
+framework:
+    mailer:
+        dsn: '%env(MAILER_DSN)%'
+        envelope:
+            sender: 'support@grownapps.sk'
+        headers:
+            From: 'AeonTrace Support <support@grownapps.sk>'

@@ -1,0 +1,61 @@
+security:
+    # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
+    password_hashers:
+        Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+    # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
+    providers:
+        # used to reload user from session & other features (e.g. switch_user)
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email
+    firewalls:
+        login:
+            pattern: ^/api/auth/
+            stateless: true
+            json_login:
+                check_path: /api/auth/login
+                username_path: email
+                password_path: password
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+            refresh_jwt:
+                check_path: /api/auth/refresh-token
+        api:
+            pattern: ^/api
+            stateless: true
+            jwt: ~
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            lazy: true
+            provider: app_user_provider
+
+    role_hierarchy:
+        ROLE_SUPER_ADMIN: [ ROLE_ADMIN, ROLE_COMPANY_MANAGER, ROLE_COMPANY_USER, ROLE_END_USER ]
+        ROLE_ADMIN: [ ROLE_COMPANY_MANAGER, ROLE_COMPANY_USER, ROLE_END_USER ]
+        ROLE_COMPANY_MANAGER: [ ROLE_COMPANY_USER, ROLE_END_USER ]
+        ROLE_COMPANY_USER: [ ROLE_END_USER ]
+        ROLE_END_USER: [ ]
+
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#the-firewall
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        - { path: ^/api/static, roles: PUBLIC_ACCESS }
+        - { path: ^/api/companies/register-company, roles: PUBLIC_ACCESS }
+        - { path: ^/api/auth/, roles: PUBLIC_ACCESS }
+        - { path: ^/api/first-image/, roles: PUBLIC_ACCESS }
+        - { path: ^/api/countries, roles: PUBLIC_ACCESS }
+        - { path: ^/api/docs, roles: PUBLIC_ACCESS }
+        - { path: ^/api/product_input_histories, roles: PUBLIC_ACCESS }
+        - { path: ^/api/product_inputs/[0-9a-fA-F\-]+$, roles: PUBLIC_ACCESS }
+        - { path: ^/api/dpps/get_processed_materials_trace/[0-9a-fA-F\-]+$, roles: PUBLIC_ACCESS }
+        - { path: ^/api/product_steps/get_processed_materials_trace/[0-9a-fA-F\-]+$, roles: PUBLIC_ACCESS }
+        - { path: ^/api/, roles: IS_AUTHENTICATED_FULLY }
