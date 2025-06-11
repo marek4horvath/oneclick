@@ -1,0 +1,14 @@
+{% trans_default_domain 'app' %}
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ 'INVITE_COMPANY_EMAIL_TITLE' | trans({}, domain = 'messages') }}</title>
+</head>
+<body>
+<p>{{ 'YOUR_LOGIN' | trans({}, domain = 'messages') }}: {{ user_email }}</p>
+<p>{{ 'INVITE_COMPANY_EMAIL_TEXT' | trans({}, domain = 'messages') }}</p>
+<p><a href="{{ invitation_link }}">{{ 'INVITATION' | trans({}, domain = 'messages') }}</a></p>
+</body>
+</html>
