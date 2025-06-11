@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "^8.5.6",
+    "@pinia/nuxt": "^0.9.0",
+    "nuxt": "^3.15.1",
+    "nuxt-echarts": "^0.2.4",
+    "sass-embedded": "^1.81.0",
+    "vite-plugin-vue-devtools": "^7.7.0",
+    "vuetify-nuxt-module": "^0.18.3"
+  },
+  "dependencies": {
+    "@dagrejs/dagre": "^1.1.4",
+    "@emailjs/browser": "^4.4.1",
+    "@imengyu/vue3-context-menu": "^1.4.4",
+    "@phosphor-icons/vue": "^2.2.1",
+    "@vue-flow/background": "^1.3.2",
+    "@vue-flow/controls": "^1.1.2",
+    "@vue-flow/core": "^1.41.7",
+    "@vue/runtime-core": "^3.5.13",
+    "pinia": "^2.2.6",
+    "pinia-plugin-persistedstate": "^4.1.3",
+    "vue-jsx-runtime": "^0.1.0",
+    "vue3-toastify": "^0.2.2"
+  }
+}

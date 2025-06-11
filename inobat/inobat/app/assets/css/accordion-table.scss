@@ -1,0 +1,39 @@
+.accordion-wrapper {
+    width: 100%;
+    padding: 40px;
+
+    .v-table {
+        .v-table__wrapper {
+            .table-header {
+                background: rgb(var(--v-theme-primary));
+            }
+
+            .table-spacing-row {
+                height: 30px;
+                display: block;
+            }
+
+            .item-row {
+                td {
+                    padding: 15px;
+                }
+
+                &:hover {
+                    background-color: #ccc;
+                }
+            }
+
+            .accordion-detail-wrapper {
+                padding: 10px !important;
+
+                .accordion-detail {
+                    padding: 10px !important;
+                }
+            }
+        }
+    }
+
+    .accordion-footer {
+        padding: 10px;
+    }
+}
