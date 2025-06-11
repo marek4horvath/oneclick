@@ -1,0 +1,18 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Enums\Steps;
+
+enum ProcessType: string
+{
+    case RAW_MATERIAL_COLLECTION = 'RAW_MATERIAL_COLLECTION';
+    case RAW_MATERIAL_PROCESS = 'RAW_MATERIAL_PROCESS';
+    case COMPONENT = 'COMPONENT';
+    case PACKAGING_MATERIAL = 'PACKAGING_MATERIAL';
+    case PACKAGING = 'PACKAGING';
+    case OEM_MANUFACTURING = 'OEM_MANUFACTURING';
+    case OEM_PROCESSING = 'OEM_PROCESSING';
+    case DISTRIBUTOR = 'DISTRIBUTOR';
+    case WAREHOUSE = 'WAREHOUSE';
+}
